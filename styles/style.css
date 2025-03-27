@@ -20,6 +20,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 30px;
 }
 
 h1,
@@ -54,9 +55,11 @@ ol {
   background-color: #D9D9D9;
 }
 
+/* Основной блок */
+
 .content {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Две равные колонки */
+  grid-template-columns: 711px 399px;
   grid-template-rows: auto;
   grid-template-areas:
     "result details";
@@ -66,13 +69,40 @@ ol {
   max-width: 1140px;
 }
 
+/* Блок вывода результатов (слева) */
+
 .result {
   grid-area: result;
 }
 
-.result__video {
-  width: 711px;
+.result__video-container {
+  margin-bottom: 16px;
 }
+
+.result__video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/*.search-form__fieldset {
+  flex: 1;
+} */
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+  padding-bottom: 4px;
+}
+
+/* Блок навигации (справа) */
 
 .content__details {
   grid-area: details;
@@ -80,20 +110,87 @@ ol {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  
   width: 399px;
 }
 
-.search-form {
-  display: flex;
-  justify-content: flex-start;
-  gap: 40px;
+.title {
+  padding-bottom: 26px;
+  color: #fff;
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 70.5px;
+  text-transform: uppercase;
 }
-.search-form__fieldset {
-  flex: 1; /* Равномерное распределение */
+
+.content__accent {
+  color: #545050;
 }
 
 .content__list-container {
-  height: 300px; /* Фиксируем высоту */
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-height: 300px;
   overflow-y: auto;
 }
 
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content__list-item {
+  
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.content__video-card {
+  display: flex;
+  flex-direction: row; /* Располагаем элементы в строку */
+  align-items: flex-start; /* Прижимаем элементы к верхнему краю (доп. ось - вертикаль) */
+  gap: none; /* Отступ между изображением и текстом */
+}
+
+.content__video-card-title {
+  margin-bottom: 6px;
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  width: 196px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  overflow: hidden;           /* Скрывает переполнение */
+  text-overflow: ellipsis; 
+}
+
+.content__video-card-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  line-height: 16.2px;
+  font-size: 18px;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  object-fit: cover; /* Заполняем контейнер */
+  object-position: center; /* Центрируем изображение */
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+}
