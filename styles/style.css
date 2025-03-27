@@ -42,6 +42,16 @@ ol {
   list-style: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 /* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
@@ -85,21 +95,58 @@ ol {
   height: 100%;
 }
 
+/* Строка поиска */
+
 .search-form {
   display: flex;
   justify-content: space-between;
   gap: 40px;
 }
 
-/*.search-form__fieldset {
-  flex: 1;
-} */
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+} 
 
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
   line-height: 100%;
   padding-bottom: 4px;
+}
+
+.search-form__label {
+  display: flex;
+  width: fit-content;
+}
+
+.search-form__textfield {
+  width: 225px;
+  border: 1px solid #fff; 
+  border-left-width: 0;
+  border-right-width: 0;
+  background-color: #1b1919;
+  font-family: Fira Sans Condensed;
+  font-weight: 400;
+  font-size: 18px;
+  appearance: none;
+  outline: none;
+}
+
+.search-form__label:has(.search-form__textfield:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+  border-radius: 0px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
 /* Блок навигации (справа) */
@@ -155,7 +202,6 @@ ol {
   display: flex;
   flex-direction: row; /* Располагаем элементы в строку */
   align-items: flex-start; /* Прижимаем элементы к верхнему краю (доп. ось - вертикаль) */
-  gap: none; /* Отступ между изображением и текстом */
 }
 
 .content__video-card-title {
@@ -194,3 +240,7 @@ ol {
 .content__video-card-description-container {
   flex-grow: 1;
 }
+
+
+/* Блок с результатами поиска */
+
