@@ -108,6 +108,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center
 }
 
 /* Строка поиска */
@@ -142,12 +143,12 @@ ol {
 }
 
 .search-form__textfield {
-  width: 220px; /* ? */
+  min-width: 220px; /* ? */
   border: 1px solid #fff; 
   border-left-width: 0;
   border-right-width: 0;
   background-color: #1b1919;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
   appearance: none;
@@ -195,7 +196,6 @@ ol {
 }
 
 .search-form__label-text {
-  padding-bottom: 3px;
   text-decoration: none;
 }
 
@@ -241,6 +241,10 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
 }
 
 .content__card-link {
@@ -260,7 +264,8 @@ ol {
   font-weight: 700;
   font-size: 30px;
   line-height: 1;
-  width: 196px;
+  width: 100%;
+  max-width: 196px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -302,20 +307,20 @@ ol {
   font-weight: 700;
   cursor: pointer;
   padding: 6px;
+  height: 34px;
   transition: background-color 0.2s ease-in-out, color 0.5s ease-in-out;
 }
 
 /* Индивидуальные стили для кнопки "Найти" */
 .search-form__submit-button {
   align-self: flex-end;
-  width: 194px;
+  min-width: 194px;
   height: 34px;
 }
 
 /* Индивидуальные стили для кнопки "Показать ещё" */
 .more-button {
   width: 100%;
-  height: 34px;
   margin-top: 30px;
   position: relative;
 }
@@ -342,14 +347,6 @@ ol {
 }
 
 /* Карточки */
-/* Стили для списка карточек */
-.content__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
 
 /* Отступы для карточек */
 .content__list-item {
