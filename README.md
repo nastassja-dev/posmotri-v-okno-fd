@@ -1,1 +1,1 @@
-https://github.com/nastassja-dev/ono-tebe-nado-fd.git
+https://github.com/nastassja-dev/posmotri-v-okno-fd.git
