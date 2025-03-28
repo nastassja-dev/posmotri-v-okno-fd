@@ -321,6 +321,7 @@ ol {
   width: 100%;
   height: 34px;
   margin-top: 30px;
+  position: relative;
 }
 
 /* Ховер-эффект: подчёркивание текста */
@@ -329,20 +330,19 @@ ol {
 }
 
 /* Активное состояние: изменение цвета фона и текста */
-.button:focus {
+.button:active {
   background-color: #545050;
-  color: #fff;
-}
-
-/* Фокусное состояние: обводка */
-.button:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
 }
 
 /* Сброс стандартного фокуса */
 .button:focus {
   outline: none;
+}
+
+/* Фокусное состояние: обводка */
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 /* Карточки */
