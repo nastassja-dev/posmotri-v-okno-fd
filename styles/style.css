@@ -98,13 +98,16 @@ ol {
 }
 
 .result__video-container {
-  margin-bottom: 16px;
+  width: 711px;
+  height: 386px;
+  margin-block-end: 16px;
+  position: relative;
 }
 
 .result__video {
-  object-fit: cover;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 /* Строка поиска */
@@ -210,12 +213,8 @@ ol {
 
 .content__details {
   grid-area: details;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   height: 100%;
-  
-  width: 399px;
+  width: 100%;
 }
 
 .title {
@@ -233,10 +232,8 @@ ol {
 }
 
 .content__list-container {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  max-height: 300px;
+  position: relative;
+  height: 298px;
   overflow-y: auto;
 }
 
@@ -276,7 +273,6 @@ ol {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-  line-clamp: 3;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   line-height: 16.2px;
