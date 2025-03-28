@@ -83,6 +83,7 @@ ol {
   grid-template-areas:
     "result details";
   align-items: end; 
+  justify-content: center;
   gap: 30px; 
   width: 100%;
   max-width: 1140px;
